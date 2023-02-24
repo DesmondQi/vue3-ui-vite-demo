@@ -1,11 +1,14 @@
 import {defineConfig} from "vite";
 import vuePlugin from "@vitejs/plugin-vue";
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
+import unocss from "./config/unocss";
+
 
 export default defineConfig({
     plugins: [
         vuePlugin(),
-        vueJsxPlugin({})
+        vueJsxPlugin({}),
+        unocss()
     ],
 
     build: {
@@ -19,6 +22,8 @@ export default defineConfig({
         },
 
         minify: false,
+
+        cssCodeSplit: true, // 编译时是否独立输出css
 
         lib: {
             entry: './src/entry.ts',

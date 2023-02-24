@@ -2,6 +2,8 @@
 // console.log(s)
 
 import {createApp} from "vue";
-import SFCButton from "./SFCButton.vue";
+import SmartyUI from './entry'
+import App from "./App.vue";
 
-createApp(SFCButton).mount('#app')
+
+createApp(App).use(SmartyUI).mount('#app')
