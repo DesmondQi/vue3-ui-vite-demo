@@ -1,8 +1,8 @@
+/// <reference types="vitest" />
 import {defineConfig} from "vite";
 import vuePlugin from "@vitejs/plugin-vue";
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
 import unocss from "./config/unocss";
-
 
 export default defineConfig({
     plugins: [
@@ -30,6 +30,14 @@ export default defineConfig({
             name: 'SmartyUI',
             fileName:'smarty-ui',
             formats: ["es", "umd", "iife"]
+        }
+    },
+    // @ts-ignore
+    test: {
+        globals: true,
+        environment: 'happy-dom',
+        transformMode: {
+            web: [/.[tj]sx$/]
         }
     }
 })
