@@ -13,7 +13,9 @@ export default defineConfig({
 
     build: {
         rollupOptions: {
+            // 将该模块保留在 bundle 之外
             external: ['vue', 'vue-router'],
+            // 全局中的某个模块在组件库中叫什么名字
             output: {
                 globals: {
                     vue: 'Vue'
@@ -21,7 +23,11 @@ export default defineConfig({
             }
         },
 
-        minify: false,
+        minify: 'terser',
+
+        reportCompressedSize: true,
+
+        sourcemap: true,
 
         cssCodeSplit: true, // 编译时是否独立输出css
 

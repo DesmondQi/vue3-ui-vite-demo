@@ -20,6 +20,7 @@ specifiers:
   happy-dom: ^8.9.0
   husky: ^8.0.3
   prettier: ^2.8.4
+  terser: ^5.16.5
   typescript: ^4.9.5
   unocss: ^0.49.7
   vite: ^4.1.2
@@ -51,12 +52,13 @@ devDependencies:
   happy-dom: 8.9.0
   husky: 8.0.3
   prettier: 2.8.4
+  terser: 5.16.5
   typescript: 4.9.5
   unocss: registry.npmmirror.com/unocss/0.49.7_vite@4.1.2
-  vite: registry.npmmirror.com/vite/4.1.2_@types+node@18.14.2
-  vitepress: 1.0.0-alpha.49_@types+node@18.14.2
-  vitepress-theme-demoblock: 2.0.2_@types+node@18.14.2
-  vitest: 0.29.2_happy-dom@8.9.0
+  vite: registry.npmmirror.com/vite/4.1.2_y6lmzpwd2pbvih6a6ro62gcin4
+  vitepress: 1.0.0-alpha.49_y6lmzpwd2pbvih6a6ro62gcin4
+  vitepress-theme-demoblock: 2.0.2_y6lmzpwd2pbvih6a6ro62gcin4
+  vitest: 0.29.2_d4awzbhbk67bpluqym4ncekg2q
 
 packages:
 
@@ -744,6 +746,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: true
 
+  /@jridgewell/source-map/0.3.2:
+    resolution: {integrity: sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==}
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.2
+      '@jridgewell/trace-mapping': 0.3.17
+    dev: true
+
   /@jridgewell/sourcemap-codec/1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==}
     dev: true
@@ -1008,7 +1017,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.1.4_@types+node@18.14.2
+      vite: 4.1.4_y6lmzpwd2pbvih6a6ro62gcin4
       vue: 3.2.47
     dev: true
 
@@ -1471,6 +1480,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       fill-range: 7.0.1
+    dev: true
+
+  /buffer-from/1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
     dev: true
 
   /cac/6.7.14:
@@ -3214,6 +3227,13 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /source-map-support/0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
+    dependencies:
+      buffer-from: 1.1.2
+      source-map: 0.6.1
+    dev: true
+
   /source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
@@ -3346,6 +3366,17 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /terser/5.16.5:
+    resolution: {integrity: sha512-qcwfg4+RZa3YvlFh0qjifnzBHjKGNbtDo9yivMqMFDy9Q6FSaQWSB/j1xKhsoUFJIqDOM3TsN6D5xbrMrFcHbg==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': 0.3.2
+      acorn: 8.8.2
+      commander: 2.20.3
+      source-map-support: 0.5.21
     dev: true
 
   /text-extensions/1.9.0:
@@ -3523,7 +3554,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-node/0.29.2_@types+node@18.14.2:
+  /vite-node/0.29.2_y6lmzpwd2pbvih6a6ro62gcin4:
     resolution: {integrity: sha512-5oe1z6wzI3gkvc4yOBbDBbgpiWiApvuN4P55E8OI131JGrSuo4X3SOZrNmZYo4R8Zkze/dhi572blX0zc+6SdA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -3533,7 +3564,7 @@ packages:
       mlly: 1.1.1
       pathe: 1.1.0
       picocolors: 1.0.0
-      vite: 4.1.4_@types+node@18.14.2
+      vite: 4.1.4_y6lmzpwd2pbvih6a6ro62gcin4
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -3544,7 +3575,7 @@ packages:
       - terser
     dev: true
 
-  /vite/4.1.4_@types+node@18.14.2:
+  /vite/4.1.4_y6lmzpwd2pbvih6a6ro62gcin4:
     resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3574,11 +3605,12 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 3.17.2
+      terser: 5.16.5
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress-theme-demoblock/2.0.2_@types+node@18.14.2:
+  /vitepress-theme-demoblock/2.0.2_y6lmzpwd2pbvih6a6ro62gcin4:
     resolution: {integrity: sha512-jisyN5zvc7muluEvshSuworGXBmfgCptgBGua8PqGOsfAw473UQ6C1g8/C9JRdAe6io7y1/xa3sNLwp8Ey1KWw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
@@ -3595,7 +3627,7 @@ packages:
       picocolors: 1.0.0
       prettier: 2.8.4
       shiki: 0.11.1
-      vitepress: 1.0.0-alpha.49_@types+node@18.14.2
+      vitepress: 1.0.0-alpha.49_y6lmzpwd2pbvih6a6ro62gcin4
       vue: 3.2.44
       yaml: 2.2.1
     transitivePeerDependencies:
@@ -3612,7 +3644,7 @@ packages:
       - terser
     dev: true
 
-  /vitepress/1.0.0-alpha.49_@types+node@18.14.2:
+  /vitepress/1.0.0-alpha.49_y6lmzpwd2pbvih6a6ro62gcin4:
     resolution: {integrity: sha512-3nUZJow4qL8NHRWYatqqVj45AJDxWst/TuOj+IbQRhxesEswa+Fpwayj9/FxzRzBl665fuiG5y+QeVhOeUm0OA==}
     hasBin: true
     dependencies:
@@ -3623,7 +3655,7 @@ packages:
       '@vueuse/core': 9.13.0_vue@3.2.47
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.14.1
-      vite: 4.1.4_@types+node@18.14.2
+      vite: 4.1.4_y6lmzpwd2pbvih6a6ro62gcin4
       vue: 3.2.47
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -3639,7 +3671,7 @@ packages:
       - terser
     dev: true
 
-  /vitest/0.29.2_happy-dom@8.9.0:
+  /vitest/0.29.2_d4awzbhbk67bpluqym4ncekg2q:
     resolution: {integrity: sha512-ydK9IGbAvoY8wkg29DQ4ivcVviCaUi3ivuPKfZEVddMTenFHUfB8EEDXQV8+RasEk1ACFLgMUqAaDuQ/Nk+mQA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -3683,8 +3715,8 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.1
       tinyspy: 1.1.1
-      vite: 4.1.4_@types+node@18.14.2
-      vite-node: 0.29.2_@types+node@18.14.2
+      vite: 4.1.4_y6lmzpwd2pbvih6a6ro62gcin4
+      vite-node: 0.29.2_y6lmzpwd2pbvih6a6ro62gcin4
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
@@ -4645,7 +4677,7 @@ packages:
       chokidar: registry.npmmirror.com/chokidar/3.5.3
       fast-glob: registry.npmmirror.com/fast-glob/3.2.12
       magic-string: registry.npmmirror.com/magic-string/0.29.0
-      vite: registry.npmmirror.com/vite/4.1.2_@types+node@18.14.2
+      vite: registry.npmmirror.com/vite/4.1.2_y6lmzpwd2pbvih6a6ro62gcin4
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -4663,7 +4695,7 @@ packages:
       '@babel/core': registry.npmmirror.com/@babel/core/7.20.12
       '@babel/plugin-transform-typescript': registry.npmmirror.com/@babel/plugin-transform-typescript/7.20.13_@babel+core@7.20.12
       '@vue/babel-plugin-jsx': registry.npmmirror.com/@vue/babel-plugin-jsx/1.1.1_@babel+core@7.20.12
-      vite: registry.npmmirror.com/vite/4.1.2_@types+node@18.14.2
+      vite: registry.npmmirror.com/vite/4.1.2_y6lmzpwd2pbvih6a6ro62gcin4
       vue: registry.npmmirror.com/vue/3.2.47
     transitivePeerDependencies:
       - supports-color
@@ -4679,7 +4711,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmmirror.com/vite/4.1.2_@types+node@18.14.2
+      vite: registry.npmmirror.com/vite/4.1.2_y6lmzpwd2pbvih6a6ro62gcin4
       vue: registry.npmmirror.com/vue/3.2.47
     dev: true
 
@@ -5710,7 +5742,7 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  registry.npmmirror.com/vite/4.1.2_@types+node@18.14.2:
+  registry.npmmirror.com/vite/4.1.2_y6lmzpwd2pbvih6a6ro62gcin4:
     resolution: {integrity: sha512-MWDb9Rfy3DI8omDQySbMK93nQqStwbsQWejXRY2EBzEWKmLAXWb1mkI9Yw2IJrc+oCvPCI1Os5xSSIBYY6DEAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.1.2.tgz}
     id: registry.npmmirror.com/vite/4.1.2
     name: vite
@@ -5743,6 +5775,7 @@ packages:
       postcss: registry.npmmirror.com/postcss/8.4.21
       resolve: registry.npmmirror.com/resolve/1.22.1
       rollup: registry.npmmirror.com/rollup/3.17.2
+      terser: 5.16.5
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
